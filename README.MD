@@ -4,6 +4,8 @@
 - Tensorflow Lite
 - Adafruit mlx90614
 - Flask SocketIO
+- Camera
+- Buzzer
 
 ## Usage
 ```bash
