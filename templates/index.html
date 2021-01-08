@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <title>Pi Video Surveillance</title>
+  <!-- <link href="{{
+      url_for('static', filename='tailwind.min.css') }}" rel="stylesheet" /> -->
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="main flex">
+    <div class="first">
+      <!-- <h1>Pi Video Surveillance</h1> -->
+      <div class="cam">
+        <div>
+          <div class="title">Automated Face Temperature Scanning</div>
+          <img src="{{ url_for('video_feed') }}">
+        </div>
+      </div>
+    </div>
+    <div class="second">
+      <div class="action">
+        <button class="button_a">Delete All</button>
+        <button class="button_b hide" disabled>Ya</button>
+      </div>
+      <div id="List">
+        <div class="card">
+          <div class="image">
+            <img src="#" />
+          </div>
+          <div class="time"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+    integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
